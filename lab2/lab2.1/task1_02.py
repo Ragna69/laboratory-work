@@ -66,7 +66,7 @@ if not found:
 
 largest = [float(digit) for digit in digits if digit.lstrip('-').replace('.','',1).isdigit()]
 if largest:
-    largest = max(largest, key=float)
+    largest = max(largest)
     print('Самое большое число:\n', largest)
 else:
     print('Нет таких чисел')
