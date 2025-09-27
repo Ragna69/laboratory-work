@@ -85,7 +85,7 @@ if minimal:
     smallest = min(minimal)
     print('Самое маленькое число:\n', smallest)
 else:
-    print('Нет таких чисел')
+    print('Нет таких чисел.')
 
 
 
