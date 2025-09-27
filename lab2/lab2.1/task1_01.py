@@ -1,6 +1,4 @@
-# text = "   это   пример   строки   "
-# words = text.split()
-# print(words)  # ['это', 'пример', 'строки']
+#Задача 1. Посчитать слова
 
 text = input('Введите текст')
 words  = text.lower().split()
