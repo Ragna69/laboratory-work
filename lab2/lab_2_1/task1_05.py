@@ -7,7 +7,7 @@ word1 = list(word_1)
 word2 = list(word_2)
 
 if sorted(word1) == sorted(word2):
-    print('Это аннаграммы!')
+    print('Это анаграммы!')
 else:
-    print('Это не аннаграммы.')
+    print('Это не анаграммы.')
 
