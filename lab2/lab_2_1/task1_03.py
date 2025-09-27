@@ -15,4 +15,4 @@ else:
         second = min(more_than_the_second)
         print('Первое большее минимального:', second)
     else:
-        print('Нет числа, большего минимального')
+        print('Нет числа, большего минимального.')
