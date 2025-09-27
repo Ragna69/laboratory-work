@@ -5,5 +5,5 @@ word_list = input('Введите список символов:\n').strip().spl
 unique = []
 for word in word_list:
     if word not in unique:
-        unique.append(word) # .appent() - добавляет элемент в конец списка
+        unique.append(word)  # .appent() - добавляет элемент в конец списка
 print('Список без повторяющихся символов:', *unique)
