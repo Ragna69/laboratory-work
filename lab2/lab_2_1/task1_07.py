@@ -16,6 +16,7 @@ else:
     compressed += word_list[-1] + str(count)
     print(compressed)
 
+
 # 2 способ (он лучше, потому что учитывает повторяющиеся символы в независимости от расположения)
 # from collections import Counter
 # word_list = input('Введите список символов:\n').strip().split()
