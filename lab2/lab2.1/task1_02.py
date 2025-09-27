@@ -6,9 +6,11 @@ list = {}
 for digit in digits:
     list[digit] = list.get(digit, 0) + 1;
 
+# 1) Уникальные числа.
 unikalnie = len(list)
 print('Количество уникальных чисел:\n', unikalnie)
 
+# 2) Повторяющиеся числа.
 print('Повторяющиеся числа:')
 found = False
 for digit in list:
@@ -17,6 +19,7 @@ for digit in list:
         found = True
 if not found:
     print('0')
+# 3.1) Четные числа.
 
 print('Четные числа:')
 found = False
@@ -27,7 +30,7 @@ for digit in list:
            found = True
 if not found:
     print('0')
-
+# 3.2) Нечетные числа.
 print('Нечетные числа:')
 found = False
 for digit in list:
@@ -38,6 +41,7 @@ for digit in list:
 if not found:
     print('0')
 
+# 4) Отрицательные числа.
 print('Отрицательные числа:')
 found = False
 for digit in list:
@@ -47,6 +51,7 @@ for digit in list:
 if not found:
     print('0')
 
+# 5) Числа с плавающей точкой.
 print('Числа с плавающей точкой:')
 found = False
 for digit in list:
@@ -56,6 +61,7 @@ for digit in list:
 if not found:
     print('0')
 
+# 6) Сумма всех чисел, кратных 5.
 print('Сумма всех чисел, кратных 5:')
 found = False
 summa = sum(int(digit) for digit in digits if digit.lstrip('-').isdigit() and int(digit) % 5 ==0)
@@ -65,6 +71,7 @@ if summa:
 if not found:
     print('0')
 
+# 7) Самое большое число.
 largest = [float(digit) for digit in digits if digit.lstrip('-').replace('.','',1).isdigit()]
 if largest:
     largest = max(largest)
@@ -72,7 +79,7 @@ if largest:
 else:
     print('Нет таких чисел')
 
-
+# 8) Самое маленькое число.
 minimal = [float(digit) for digit in digits if digit.lstrip('-').replace('.','',1).isdigit()]
 if minimal:
     smallest = min(minimal)
