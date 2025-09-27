@@ -1,25 +1,26 @@
-chisla = input('Введите числа:\n')
-digits  = chisla.split()
+# Задача 2. Анализ списка чисел
 
-spisok = {}
+digits = input('Введите числа:\n').split()
+
+list = {}
 for digit in digits:
-    spisok[digit] = spisok.get(digit, 0) + 1;
+    list[digit] = list.get(digit, 0) + 1;
 
-unikalnie = len(spisok)
+unikalnie = len(list)
 print('Количество уникальных чисел:\n', unikalnie)
 
 print('Повторяющиеся числа:')
 found = False
-for digit in spisok:
-    if spisok[digit] > 1:
-        print(digit,':', spisok[digit])
+for digit in list:
+    if list[digit] > 1:
+        print(digit,':', list[digit])
         found = True
 if not found:
     print('0')
 
 print('Четные числа:')
 found = False
-for digit in spisok:
+for digit in list:
     if not '-' or not '.' in digit:
         if int(digit) % 2 == 0:
            print(digit)
@@ -29,7 +30,7 @@ if not found:
 
 print('Нечетные числа:')
 found = False
-for digit in spisok:
+for digit in list:
     if not '-' or not '.' in digit:
        if int(digit) % 2 == 1:
            print(digit)
@@ -39,7 +40,7 @@ if not found:
 
 print('Отрицательные числа:')
 found = False
-for digit in spisok:
+for digit in list:
     if '-' in digit:
         print(digit)
         found = True
@@ -48,7 +49,7 @@ if not found:
 
 print('Числа с плавающей точкой:')
 found = False
-for digit in spisok:
+for digit in list:
     if '.' in digit or 'e' in digit.lower():
         print(digit)
         found = True
