@@ -1,3 +1,5 @@
+#Задача 3. Второе по величине число
+
 digits = input('Введите числа:\n').split()
 
 minimal = [float(digit) for digit in digits if digit.lstrip('-').replace('.', '', 1).isdigit()]
