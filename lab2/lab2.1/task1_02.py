@@ -4,7 +4,7 @@ digits = input('Введите числа:\n').split()
 
 list = {}
 for digit in digits:
-    list[digit] = list.get(digit, 0) + 1;
+    list[digit] = list.get(digit, 0) + 1
 
 # 1) Уникальные числа.
 unikalnie = len(list)
