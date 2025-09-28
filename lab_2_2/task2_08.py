@@ -17,7 +17,7 @@ def timing(func):
     return wrapper
 
 @timing
-def slow_function():  # выполняет подсчёт суммы
+def slow_function(): # выполняет подсчёт суммы
     total = 0  # для накопления суммы
     for i in range(10**6): # цикл от 0 до 1000000
         total += i
