@@ -20,7 +20,7 @@ def list_modification(lst):
             i += 1
 
 list_a = eval(input("Введите список (например: [1, 2, [3, [4]]]):\n")) # превращает строку в список (только с правильным вводом)
-list_modification(list_a)  # передает список в функцию
+list_modification(list_a) # передает список в функцию
 print("Плоский список:", list_a)
 
 #для себя
