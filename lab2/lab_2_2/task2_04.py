@@ -34,9 +34,9 @@ def input_matrix():
     return matrix
 
 def print_matrix(matrix, title):
-    print(f"\n{title}:") # выводим заголовок
+    print(f"\n{title}:") # выводит заголовок
     for row in matrix:
-        print(" ".join(str(x) for x in row)) # выводим строку как последовательность чисел через пробел
+        print(" ".join(str(x) for x in row)) # выводит строку как последовательность чисел через пробел
 
 original = input_matrix() # получает матрицу от пользователя
 transposed = transposition_of_the_matrix(original) # транспонирует её
