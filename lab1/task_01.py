@@ -1,3 +1,5 @@
+# 1) ФИО
+
 surname = input('Введите Фамилию:\n')
 name = input('Введите Имя:\n')
 otchestvo = input('Введите Отчество:\n')
