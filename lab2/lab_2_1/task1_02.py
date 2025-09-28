@@ -19,8 +19,8 @@ for digit in list:
         found = True
 if not found:
     print('0')
-# 3.1) Четные числа.
 
+# 3.1) Четные числа.
 print('Четные числа:')
 found = False
 for digit in list:
@@ -30,6 +30,7 @@ for digit in list:
            found = True
 if not found:
     print('0')
+
 # 3.2) Нечетные числа.
 print('Нечетные числа:')
 found = False
@@ -86,6 +87,11 @@ if minimal:
     print('Самое маленькое число:\n', smallest)
 else:
     print('Нет таких чисел.')
+
+# found = False  ─╮
+# ...             ├─ если нет подходящего под услвие числа, то пишется 0
+# if not found:  ─┤
+#     print('0') ─╯
 
 
 
