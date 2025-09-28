@@ -16,5 +16,6 @@ list_modification(list_a)  # передает список в функцию
 print("Плоский список:", list_a)
 
 #для себя
-#https://gitverse.ru/blog/articles/development/543-kak-ispolzovat-metod-eval-v-python
-#https://docs-python.ru/tutorial/vstroennye-funktsii-interpretatora-python/funktsija-eval/
+# https://habr.com/ru/articles/560072/?ysclid=mg3s6w06ql879797145
+# https://gitverse.ru/blog/articles/development/543-kak-ispolzovat-metod-eval-v-python
+# https://docs-python.ru/tutorial/vstroennye-funktsii-interpretatora-python/funktsija-eval/
