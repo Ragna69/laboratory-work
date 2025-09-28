@@ -28,7 +28,7 @@ def merge(a, b):
             else:
                a[key] = b[key]
         else:
-            a[key] = b[key] # в a нет ключа - добавить
+            a[key] = b[key]  # в a нет ключа - добавить
 
 dict_a = {"a": 1, "b":{"c": 1, "f": 4}}
 dict_b = {"d": 1, "b":{"c": 2, "e": 3}}
