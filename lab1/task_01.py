@@ -1,7 +1,9 @@
-a = input('Введите Фамилию:\n')
-b = input('Введите Имя:\n')
-c = input('Введите Отчество:\n')
-if not a or not b or not c:
+# 1) ФИО
+
+surname = input('Введите Фамилию:\n')
+name = input('Введите Имя:\n')
+otchestvo = input('Введите Отчество:\n')
+if not surname or not name or not otchestvo:
     print('Все поля должны быть заполнены')
-result = a + ' ' + b[0] + '.' + c[0] + '.'
+result = surname + ' ' + name[0] + '.' + otchestvo[0] + '.'
 print(result)
