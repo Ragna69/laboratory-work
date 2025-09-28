@@ -24,9 +24,9 @@ def slow_add(a, b):
     return a + b
 
 # Тестирование
-print(slow_add(2, 3))  # вычисляется
-print(slow_add(2, 3))  # результат берётся из кэша
-print(slow_add(4, 5))  # вычисляется
-print(slow_add(4, 5))  # берётся из кэша
+print(slow_add(2, 3)) # вычисляется
+print(slow_add(2, 3)) # результат берётся из кэша
+print(slow_add(4, 5)) # вычисляется
+print(slow_add(4, 5)) # берётся из кэша
 
 
