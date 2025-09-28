@@ -8,7 +8,7 @@ else:
     compressed = ''
     count = 1
     for i in range(1, len(word_list)):
-        if word_list[i] == word_list[i-1]: # если элемент равен предыдущему
+        if word_list[i] == word_list[i-1]:  # если элемент равен предыдущему
             count += 1
         else:
             compressed += word_list[i-1] + str(count) # если не равен предыдущему, то добавляем в список
