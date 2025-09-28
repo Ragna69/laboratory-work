@@ -8,7 +8,7 @@ if len(minimal) < 2:
     print('Введите больше одного числа.')
 else:
     min_2 = min(minimal)
-    # Фильтруем числа, которые больше минимального
+# Фильтруем числа, которые больше минимального
     more_than_the_second = [x for x in minimal if x > min_2]
 
     if more_than_the_second:
