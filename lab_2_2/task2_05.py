@@ -10,7 +10,7 @@ def cache(func):
     def wrapper(*args):
         if args in cached_results: # если такие аргументы уже были — результат есть в кэше
             print(f"Из кэша: {args} → {cached_results[args]}")  # выводит, что берёт из кэша
-            return cached_results[args]   # возвращает сохранённый результат
+            return cached_results[args]  # возвращает сохранённый результат
         result = func(*args) # иначе вызывает оригинальную функцию
         cached_results[args] = result # сохраняет результат в кэш
         print(f"Вычислено: {args} → {result}")
