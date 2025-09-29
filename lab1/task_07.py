@@ -1,3 +1,4 @@
+
 time = int(input('Введите количество секунд:'))
 mins =time // 60
 seconds = time - mins * 60

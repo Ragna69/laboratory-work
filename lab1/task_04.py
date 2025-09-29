@@ -1,3 +1,4 @@
+
 summa = int(input('Введите целую сумму в рублях:'))
 hungred = summa // 100
 summa -= hungred * 100
