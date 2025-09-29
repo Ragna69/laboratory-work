@@ -1,18 +1,15 @@
-s = int(input('Введите целую сумму в рублях:'))
-#if s % 1 != 0:
-#    print('Это не целое число.')
-#else:
-a = s // 100
-s = s - a * 100
-b = s // 50
-s = s - b * 50
-c = s // 10
-s = s - c * 10
-d = s // 5
-s = s - d * 5
-e = s // 2
-s = s - e * 2
-f = s // 1
-s = s - d * 1
-result = (a, b, c, d, e, f)
+summa = int(input('Введите целую сумму в рублях:'))
+hungred = summa // 100
+summa -= hungred * 100
+fifty = summa // 50
+summa -= fifty * 50
+ten = summa // 10
+summa -= ten * 10
+five = summa // 5
+summa -= five * 5
+two = summa // 2
+summa -= two * 2
+one = summa // 1
+summa -= one * 1
+result = (hungred, fifty, ten, five, two, one)
 print(result)
