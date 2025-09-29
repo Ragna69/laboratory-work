@@ -11,5 +11,4 @@ two = summa // 2
 summa -= two * 2
 one = summa // 1
 summa -= one * 1
-result = (hungred, fifty, ten, five, two, one)
-print(result)
+print(f"Размен: \n{hungred} - количество сотен \n{fifty} - количество пятидесяток \n{ten} - количество десяток \n{five} - количество пятёрок \n{two} - количество двоек \n{one} - количество единиц")
