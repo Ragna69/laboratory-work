@@ -147,6 +147,12 @@ def main():
 
         choice = input("Выберите действие: ")
 
+        try:
+            if choice == "1":
+                name = input("Имя: ")
+                surname = input("Фамилия: ")
+                client_id = input("ID: ")
+                bank.create_client(name, surname, client_id)
 
 
 
