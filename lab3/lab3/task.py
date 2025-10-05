@@ -46,7 +46,7 @@ class Client:
         self.name = name
         self.surname = surname
         self.client_id = client_id
-        self.accounts = {} # словарь: ключ — валюта, значение — объект Account; currency → Account
+        self.accounts = {} # словарь: ключ — валюта, значение — объект Account;
 
     def open_account(self, currency):
         if currency in self.accounts:
@@ -58,8 +58,17 @@ class Client:
         if currency not in self.accounts:
             raise AccountNotFound(f"Счёт в валюте {currency} не найден.")
         del self.accounts[currency] # удаляет счёт из словаря
+        print(f"Счёт в {currency} закрыт.")
 
+    def get_account(self, currency):
+        if currency not in self.accounts:
+            raise AccountNotFound(f"Счёт в валюте {currency} не найден.")
+        return self.accounts[currency] # возвращает объект счёта по валюте
 
+    def get_summary(self): # осздаёт словарь: валюта → баланс
+        summary = {cur: acc.balance for cur, acc in self.accounts.items()}
+        total = sum(summary.values()) # суммарный баланс по всем счетам
+        return summary, total # возвращает словарь и сумму
 class Bank:
 
 
