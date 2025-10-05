@@ -47,6 +47,7 @@ class Client:
         self.surname = surname
         self.client_id = client_id
         self.accounts = {} # словарь: ключ — валюта, значение — объект Account; currency → Account
+
     def open_account(self, currency):
         if currency in self.accounts:
             raise AccountAlreadyExists(f"Счёт в валюте {currency} уже существует.")
