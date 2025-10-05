@@ -69,6 +69,14 @@ class Client:
         summary = {cur: acc.balance for cur, acc in self.accounts.items()}
         total = sum(summary.values()) # суммарный баланс по всем счетам
         return summary, total # возвращает словарь и сумму
+
+# Класс счёта
+class Account:
+    def __init__(self, currency, balance=0):
+        self.currency = currency  # валюта счёта
+        self.balance = balance  # начальный баланс (по умолчанию 0)
+
+
 class Bank:
 
 
