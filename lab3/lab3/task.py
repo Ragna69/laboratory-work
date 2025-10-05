@@ -76,6 +76,16 @@ class Account:
         self.currency = currency  # валюта счёта
         self.balance = balance  # начальный баланс (по умолчанию 0)
 
+    def deposit(self, amount):
+        self.balance += amount # увеличивает баланс на указанную сумму
+        print(f"Пополнено: {amount} {self.currency}")
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            raise InsufficientFunds("Недостаточно средств.")# проверка на превышение баланса
+        self.balance -= amount # уменьшает баланс
+        print(f"Снято: {amount} {self.currency}")
+
 
 class Bank:
 
