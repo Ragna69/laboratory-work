@@ -47,38 +47,24 @@ class Client:
         self.surname = surname
         self.client_id = client_id
         self.accounts = {} # словарь: ключ — валюта, значение — объект Account; currency → Account
+    def open_account(self, currency):
+        if currency in self.accounts:
+            raise AccountAlreadyExists(f"Счёт в валюте {currency} уже существует.")
+        self.accounts[currency] = Account(currency)  # создаёт новый счёт в указанной валюте
+        print(f"Счёт в {currency} открыт.")
 
 class Bank:
-    def initialisation (self, client = None):
-        if client:
-            self.client = client
-        else:
-            self.client = []        # self.client = client if client else []
 
-    def create_client(self, name, surname, client_id):
-        if client_id not in self.client:
-            self.client[client_id] = idclient(name, surname, client_id) # ???
-            print(f'Клиент Добавлен: {surname}, {name}, ID: {client_id}')
-        else:
-            print('Такой клиент уже существует.')
-
-    def in_client(self, client_id):
-        if client_id not in self.client:
-            raise "Такого клиента не существует." #???
-        return self.client[client_id]
 
     # def Client_Find(self, client_id):
 
     def TransferOfCurrency(self, from_client_id, from_currency, to_client_id, to_currency, amount):
         from_client = self.in_client(from_client_id)
         to_client = self.in_client(to_client_id)
-
         from_account = from_client.get_account(from_currency)
         to_account = to_client.get_account(to_currency)
-
         if from_account.currency != to_account.currency:
             raise CurrencyMismatch("Переводы разных валют запрещены.")
-
         from_account.withdraw(amount)
         to_account.deposit(amount)
         print(
