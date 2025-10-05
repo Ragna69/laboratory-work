@@ -22,30 +22,23 @@
 # балансе.
 
 import json
-from datetime import datetime
 
-class ClientAlreadyExists(Exception):
-    # Ошибка, клиент с таким именем уже существует.
+class ClientAlreadyExists(Exception): # Ошибка: клиент с таким ID уже существует
     pass
 
-class SuchACurrencyDoesNotExists(Exception):
-    # Ошибка, такой валюты не существует.
+class AccountAlreadyExists(Exception): # Ошибка: счёт в валюте уже открыт у клиента
     pass
 
-class YourBalanceIsNotEnoughFunds(Exception):
-    # Ошибка, на вашем балансе недостаточно средств.
+class AccountNotFound(Exception): # счёт в указанной валюте не найден
     pass
 
-class IncorrectPassword(Exception):
-    # Ошибка, вы ввели неправильный пароль.
+class InsufficientFunds(Exception): # недостаточно средств на счёте
     pass
 
-class AccountWithSuchACurrencyAlreadyExists(Exception):
-    # Ошибка, счет с такой валютой уже существует.
+class CurrencyMismatch(Exception): # попытка перевода между разными валютами
     pass
 
-class NotFoundAnAccountWithThisCurrency(Exception):
-    # Ошибка, счет с этой валютой не найден.
+class ClientNotFound(Exception): # клиент с таким ID не найден
     pass
 
 
@@ -67,12 +60,29 @@ class Bank:
     def in_client(self, client_id):
         if client_id not in self.client:
             raise "Такого клиента не существует." #???
+        return self.client[client_id]
 
-    def Client_Find(self, client_id):
+    # def Client_Find(self, client_id):
+
+    def TransferOfCurrency(self, from_client_id, from_currency, to_client_id, to_currency, amount):
+        from_client = self.in_client(from_client_id)
+        to_client = self.in_client(to_client_id)
+
+        from_account = from_client.get_account(from_currency)
+        to_account = to_client.get_account(to_currency)
+
+        if from_account.currency != to_account.currency:
+            raise CurrencyMismatch("Переводы разных валют запрещены.")
+
+        from_account.withdraw(amount)
+        to_account.deposit(amount)
+        print(
+            f"Перевод {amount} {from_currency} со счета {from_client.name} "
+            f"в {to_currency} на счет {to_client.name} в {to_currency}"
+        )
 
 
-# def (self, client_id):
-# def (self, client_id):
+
 
 
 
