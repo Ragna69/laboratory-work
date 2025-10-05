@@ -164,6 +164,18 @@ def main():
                 currency = input("Валюта счёта: ")
                 bank.get_client(client_id).close_account(currency)
 
+            elif choice == "4":
+                client_id = input("Ваш ID: ")
+                currency = input("Валюта: ")
+                amount = float(input("Сумма: "))
+                bank.get_client(client_id).get_account(currency).deposit(amount)
+
+            elif choice == "5":
+                client_id = input("Ваш ID: ")
+                currency = input("Валюта: ")
+                amount = float(input("Сумма: "))
+                bank.get_client(client_id).get_account(currency).withdraw(amount)
+
 
 
 
