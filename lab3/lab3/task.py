@@ -89,22 +89,8 @@ class Account:
 
 class Bank:
 
-
     # def Client_Find(self, client_id):
 
-    def TransferOfCurrency(self, from_client_id, from_currency, to_client_id, to_currency, amount):
-        from_client = self.in_client(from_client_id)
-        to_client = self.in_client(to_client_id)
-        from_account = from_client.get_account(from_currency)
-        to_account = to_client.get_account(to_currency)
-        if from_account.currency != to_account.currency:
-            raise CurrencyMismatch("Переводы разных валют запрещены.")
-        from_account.withdraw(amount)
-        to_account.deposit(amount)
-        print(
-            f"Перевод {amount} {from_currency} со счета {from_client.name} "
-            f"в {to_currency} на счет {to_client.name} в {to_currency}"
-        )
 
 
 
