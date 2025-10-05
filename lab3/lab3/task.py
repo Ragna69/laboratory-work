@@ -154,6 +154,16 @@ def main():
                 client_id = input("ID: ")
                 bank.create_client(name, surname, client_id)
 
+            elif choice == "2":
+                client_id = input("Ваш ID: ")
+                currency = input("Валюта счёта: ")
+                bank.get_client(client_id).open_account(currency)
+
+            elif choice == "3":
+                client_id = input("Ваш ID: ")
+                currency = input("Валюта счёта: ")
+                bank.get_client(client_id).close_account(currency)
+
 
 
 
