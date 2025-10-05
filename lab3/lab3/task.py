@@ -88,6 +88,14 @@ class Account:
 
 
 class Bank:
+    def __init__(self):
+        self.clients = {}  # словарь: client_id → объект Client
+
+    def create_client(self, name, surname, client_id):
+        if client_id in self.clients:
+            raise ClientAlreadyExists("Клиент уже существует.")
+        self.clients[client_id] = Client(name, surname, client_id) # Создаём клиента
+        print(f"Клиент создан: {surname} {name}, ID: {client_id}")
 
     # def Client_Find(self, client_id):
 
