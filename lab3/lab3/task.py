@@ -115,7 +115,7 @@ class Bank:
         from_acc.withdraw(amount)  # снимает средства
         to_acc.deposit(amount)  # переводит получателю
         print(f"Переведено {amount} {from_currency} от {from_client.name} к {to_client.name}")
-        
+
     def export_summary(self, client_id):
         client = self.get_client(client_id) # получает клиента
         summary, total = client.get_summary() # получает данные по счетам
@@ -129,10 +129,21 @@ class Bank:
             json.dump(data, f, ensure_ascii=False) #indent=
         print("Выписка сохранена.")# ensure_ascii=False позволяет сохранять не-ASCII символы (например, кириллицу) как есть
 
-    # def Client_Find(self, client_id):
+def main():
+    bank = Bank()  # создаёт объект в банке
 
+    while True:
+        print("\n--- БАНКОВСКОЕ МЕНЮ ---")
+        print("1. Создать клиента")
+        print("2. Открыть счёт")
+        print("3. Закрыть счёт")
+        print("4. Пополнить счёт")
+        print("5. Снять со счёта")
+        print("6. Перевести между клиентами")
+        print("7. Выписка по счетам")
+        print("0. Выход")
 
-
+        choice = input("Выберите действие: ")
 
 
 
