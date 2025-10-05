@@ -41,7 +41,12 @@ class CurrencyMismatch(Exception): # попытка перевода между 
 class ClientNotFound(Exception): # клиент с таким ID не найден
     pass
 
-
+class Client:
+    def __init__(self, name, surname, client_id):
+        self.name = name
+        self.surname = surname
+        self.client_id = client_id
+        self.accounts = {} # словарь: ключ — валюта, значение — объект Account; currency → Account
 
 class Bank:
     def initialisation (self, client = None):
