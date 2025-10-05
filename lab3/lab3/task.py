@@ -97,6 +97,11 @@ class Bank:
         self.clients[client_id] = Client(name, surname, client_id) # Создаём клиента
         print(f"Клиент создан: {surname} {name}, ID: {client_id}")
 
+    def get_client(self, client_id):
+        if client_id not in self.clients:
+            raise ClientNotFound("Клиент не найден.")
+        return self.clients[client_id] # возвращает клиента по ID
+
     # def Client_Find(self, client_id):
 
 
