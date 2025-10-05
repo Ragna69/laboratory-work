@@ -109,6 +109,13 @@ class Bank:
         from_acc = from_client.get_account(from_currency)  # счёт отправителя
         to_acc = to_client.get_account(to_currency)  # счёт получателя
 
+        if from_acc.currency != to_acc.currency:
+            raise CurrencyMismatch("Нельзя переводить между разными валютами.")
+
+        from_acc.withdraw(amount)  # снимает средства
+        to_acc.deposit(amount)  # переводит получателю
+        print(f"Переведено {amount} {from_currency} от {from_client.name} к {to_client.name}")
+
     # def Client_Find(self, client_id):
 
 
