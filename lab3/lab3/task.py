@@ -115,6 +115,19 @@ class Bank:
         from_acc.withdraw(amount)  # снимает средства
         to_acc.deposit(amount)  # переводит получателю
         print(f"Переведено {amount} {from_currency} от {from_client.name} к {to_client.name}")
+        
+    def export_summary(self, client_id):
+        client = self.get_client(client_id) # получает клиента
+        summary, total = client.get_summary() # получает данные по счетам
+        data = {
+            "client": f"{client.surname} {client.name}", # имя клиента
+            "accounts": summary, # балансы по валютаи
+            "total_balance": total # общий баланс
+        }
+        # сохраняет данные в JSON-файл
+        with open(f"{client_id}_summary.json", "w", encoding="utf-8") as f: # "w" если файл существует, он будет перезаписан.
+            json.dump(data, f, ensure_ascii=False) #indent=
+        print("Выписка сохранена.")# ensure_ascii=False позволяет сохранять не-ASCII символы (например, кириллицу) как есть
 
     # def Client_Find(self, client_id):
 
