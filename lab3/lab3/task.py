@@ -54,6 +54,12 @@ class Client:
         self.accounts[currency] = Account(currency)  # создаёт новый счёт в указанной валюте
         print(f"Счёт в {currency} открыт.")
 
+    def close_account(self, currency):
+        if currency not in self.accounts:
+            raise AccountNotFound(f"Счёт в валюте {currency} не найден.")
+        del self.accounts[currency] # удаляет счёт из словаря
+
+
 class Bank:
 
 
