@@ -176,6 +176,23 @@ def main():
                 amount = float(input("Сумма: "))
                 bank.get_client(client_id).get_account(currency).withdraw(amount)
 
+            elif choice == "6":
+                from_id = input("Ваш ID: ")
+                to_id = input("ID получателя: ")
+                currency = input("Валюта: ")
+                amount = float(input("Сумма: "))
+                bank.transfer(from_id, currency, to_id, currency, amount)
+
+            elif choice == "7":
+                client_id = input("Ваш ID: ")
+                bank.export_summary(client_id)
+
+            elif choice == "0":
+                print("Выход из системы.")
+                break
+
+            else:
+                print("Неверный выбор.")
 
 
 
