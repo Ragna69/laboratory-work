@@ -102,6 +102,12 @@ class Bank:
             raise ClientNotFound("Клиент не найден.")
         return self.clients[client_id] # возвращает клиента по ID
 
+    def transfer(self, from_client_id, from_currency, to_client_id, to_currency, amount):
+        from_client = self.get_client(from_client_id)  # получает отправителя
+        to_client = self.get_client(to_client_id)  # получает получателя
+
+
+
     # def Client_Find(self, client_id):
 
 
