@@ -106,7 +106,8 @@ class Bank:
         from_client = self.get_client(from_client_id)  # получает отправителя
         to_client = self.get_client(to_client_id)  # получает получателя
 
-
+        from_acc = from_client.get_account(from_currency)  # счёт отправителя
+        to_acc = to_client.get_account(to_currency)  # счёт получателя
 
     # def Client_Find(self, client_id):
 
