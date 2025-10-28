@@ -4,7 +4,7 @@ if not a or not a.isdigit():
 else:
     b = input('Введите число b:\n')
     if not b or not b.isdigit():
-        print('Ошибка: пустая строка или не число')
+        print('Ошибка: пустая строка или не число.')
     else:
         summa = int(a)+int(b)
         print (summa)
