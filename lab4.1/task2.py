@@ -1,23 +1,3 @@
-# import matplotlib.pyplot as plt
-# import math
-#
-# x_range = range(-10,10)
-# x_filter = [x for x in x_range if x != 3 and x != -3]
-# f_x = [ 5/(x ** 2 - 9)
-# for x in x_filter]
-#
-#
-#
-# plt.figure(figsize=(10, 10))
-# plt.plot(x_filter,f_x, label='f(x)', color = 'black')
-#
-# plt.title('График функции на интервале [−10; 10]')
-# plt.xlabel('x')
-# plt.ylabel('f(x)')
-# plt.grid(True)
-# plt.legend()
-# plt.show()
-
 import matplotlib.pyplot as plt
 import math
 
