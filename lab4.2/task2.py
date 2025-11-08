@@ -1,9 +1,9 @@
 import numpy as np
 
-lengths_str = "20 8 9 18 5 12 16 16 6 7"
-speeds_str = "44 70 44 66 46 38 38 37 66 67"
-k = 4
-p = 7
+lengths_str = "63 13 9 18 -5 76 16 16 6 3"
+speeds_str = "44 20 3462 346 42 52 38 1 66 67"
+k = 3
+p = 8
 
 # Преобразование строк в массивы
 lengths = np.fromstring(lengths_str, sep=' ')
