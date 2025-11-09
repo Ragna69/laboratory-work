@@ -19,7 +19,6 @@ plt.figure(figsize=(10, 6)) # dpi=100, facecolor='white'
 plt.plot(x_degrees, f_x, label='f(x)', color = 'black')
 plt.plot(x_degrees, h_x, label='h(x)', color = 'red')
 
-# Оформление
 plt.title('Графики функций f(x) и h(x) на промежутке от −360° до 360°')
 plt.xlabel('Градусы,°')
 plt.ylabel('Значение функции')
