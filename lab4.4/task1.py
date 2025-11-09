@@ -17,7 +17,7 @@ df['month'] = df['FLIGHT_DATE_LOC'].dt.month
 df['year'] = df['FLIGHT_DATE_LOC'].dt.year
 
 #───Общая статистика───
-print("=== ОБЩАЯ СТАТИСТИКА───")
+print("───ОБЩАЯ СТАТИСТИКА───")
 print(df.describe(include='all'))
 
 #───Сезонная агрегация───
@@ -94,6 +94,6 @@ plt.tight_layout()
 plt.show()
 
 #───Финальный вывод───
-print("\n=== ПРОГНОЗ───")
+print("\n───ПРОГНОЗ───")
 print(f"RMSE прогноза: {rmse:.2f}")
 print(f"Прогноз на следующие периоды: {future_y.round(2)}")
