@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, Polygon, Rectangle
 
 fig, ax = plt.subplots(figsize=(100, 100))
-
 ax.set_xlim(-10, 8.2)
 ax.set_ylim(-7.9, 10)
 
