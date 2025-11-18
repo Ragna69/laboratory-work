@@ -10,7 +10,7 @@ def transposition_of_the_matrix(matrix): # принимает матрицу и 
     transposed = []  # пустой список
 
     for column in range(columns): # проходит по каждому столбцу
-        new_row = []  # новая строка для транспонированной матрицы
+        new_row = [] # новая строка для транспонированной матрицы
         for row in range(rows): # проходит по каждой строке исходной матрицы
             new_row.append(matrix[row][column])# добавляет элемент из столбца в новую строку
 #                    ╰────┬────╯ ╭ matrix[row][column] — берёт элемент из столбца column строки row

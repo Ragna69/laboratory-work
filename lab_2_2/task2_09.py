@@ -24,7 +24,6 @@ def type_check(*expected_types): # принимает типы аргумент�
 @type_check(int, int)
 def add(a, b):
     return a + b
-
 print(add(25, 75))
 print(add(2, "hello"))
 
