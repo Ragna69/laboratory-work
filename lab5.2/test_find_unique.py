@@ -1,6 +1,4 @@
-import pytest
 from task2 import find_unique
-
 def test_1():
     assert find_unique([1, 2, 2, 3, 4, 4]) == [1, 3]
 
