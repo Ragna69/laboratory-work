@@ -1,4 +1,4 @@
-from task3 import is_palindrome   # task3.py — файл, где лежит функция
+from task3 import is_palindrome
 def test_1():
     assert is_palindrome("шалаш") is True
 
